@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0c0f"/>
+  <rect width="1200" height="630" fill="url(#g)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="g" cx="20%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#e7a63c" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#0a0c0f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="80" y="80" width="1040" height="470" rx="16" fill="#14181d" stroke="#22272e"/>
+  <rect x="120" y="130" width="260" height="90" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="120" y="240" width="500" height="230" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="640" y="130" width="440" height="150" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="640" y="300" width="440" height="170" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="145" y="290" width="450" height="14" rx="4" fill="#22272e"/>
+  <rect x="145" y="320" width="450" height="14" rx="4" fill="#22272e"/>
+  <rect x="145" y="350" width="450" height="14" rx="4" fill="#22272e"/>
+  <polyline points="665,420 720,380 780,400 840,340 900,360 960,300 1030,320" fill="none" stroke="#e7a63c" stroke-width="3"/>
+  <text x="120" y="165" fill="#eef1f4" font-family="Arial" font-size="20" font-weight="600">Revenue</text>
+  <text x="120" y="195" fill="#e7a63c" font-family="Arial" font-size="26" font-weight="700">TZS 4.2M</text>
+</svg>

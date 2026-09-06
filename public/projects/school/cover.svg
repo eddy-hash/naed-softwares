@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0c0f"/>
+  <rect x="80" y="80" width="1040" height="470" rx="16" fill="#14181d" stroke="#22272e"/>
+  <rect x="120" y="130" width="220" height="90" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="360" y="130" width="220" height="90" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="600" y="130" width="220" height="90" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="840" y="130" width="240" height="90" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="120" y="250" width="500" height="250" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="640" y="250" width="440" height="250" rx="10" fill="#191e24" stroke="#22272e"/>
+  <rect x="150" y="290" width="20" height="180" fill="#e7a63c" opacity="0.85"/>
+  <rect x="190" y="330" width="20" height="140" fill="#e7a63c" opacity="0.6"/>
+  <rect x="230" y="360" width="20" height="110" fill="#e7a63c" opacity="0.4"/>
+  <rect x="270" y="310" width="20" height="160" fill="#e7a63c" opacity="0.7"/>
+  <text x="150" y="170" fill="#eef1f4" font-family="Arial" font-size="16">Attendance</text>
+  <text x="150" y="200" fill="#4fb4bf" font-family="Arial" font-size="24" font-weight="700">96.4%</text>
+</svg>
