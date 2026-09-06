@@ -15,10 +15,7 @@ A premium, original software showcase and portfolio site for NAED SOFTWARES, bui
 
 ```bash
 npm install
-npm run dev
-```
-
-Visit http://localhost:3000.
+npm dev
 
 ## Build
 
@@ -27,7 +24,7 @@ npm run build
 npm run start
 ```
 
-## Before you launch — things to update
+settings
 
 1. **Social & contact links** — `lib/config.ts` contains placeholder GitHub, LinkedIn, Facebook and email addresses (`github.com/naedsoftwares`, etc.). Replace these with your real profile URLs and inbox before going live.
 2. **Live demo URLs** — as projects go live, add a `liveUrl` to the relevant entry in `data/projects.ts`. The project detail page will automatically swap the "Live Demo Coming Soon" badge for a working "Open Live Demo" button.
