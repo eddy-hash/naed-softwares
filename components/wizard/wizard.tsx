@@ -7,14 +7,18 @@ const steps = [
   { title: "Welcome", content: "We build practical, modern software solutions.", target: "hero" },
   { title: "Tech Stack", content: "Next.js, React, TypeScript, and more.", target: "tech-strip" },
   { title: "Projects", content: "Browse our portfolio of real-world applications.", target: "projects" },
-  { title: "Contact", content: "Reach out and let’s start a conversation.", target: "contact" },
+  { title: "Contact", content: "Reach out and let's start a conversation.", target: "contact" },
 ];
 
-export function Wizard({ isOpen, onClose }) {
+interface WizardProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function Wizard({ isOpen, onClose }: WizardProps) {
   const [stepIndex, setStepIndex] = useState(0);
   const step = steps[stepIndex];
 
-  // Lock body scroll when wizard is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
