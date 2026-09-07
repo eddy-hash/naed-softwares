@@ -9,7 +9,58 @@
 @import "@fontsource/ibm-plex-mono/500.css";
 
 :root {
-  /* Surfaces */
+  /* Surfaces — light theme (default until JS resolves stored preference) */
+  --background: #f7f7f4;
+  --surface: #ffffff;
+  --surface-2: #f1f1ed;
+  --surface-3: #e8e8e2;
+  --border: #e2e2db;
+  --border-strong: #d1d1c8;
+
+  /* Text */
+  --foreground: #15171a;
+  --muted: #5a6070;
+  --muted-2: #82879a;
+
+  /* Brand */
+  --accent: #c9821f;
+  --accent-soft: #c9821f1a;
+  --accent-strong: #b5741a;
+  --signal: #2c8791;
+  --signal-soft: #2c87911a;
+
+  /* Status */
+  --success: #2f9463;
+  --success-soft: #2f94631a;
+  --warning: #b5741a;
+  --warning-soft: #b5741a1a;
+  --destructive: #c94a3d;
+  --destructive-soft: #c94a3d1a;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(20, 20, 15, 0.06);
+  --shadow-md: 0 4px 16px rgba(20, 20, 15, 0.08);
+  --shadow-lg: 0 12px 40px rgba(20, 20, 15, 0.1);
+  --shadow-glow: 0 0 0 1px var(--accent-soft), 0 8px 30px -8px rgba(201, 130, 31, 0.2);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Spacing scale reference (used via tailwind arbitrary + tokens) */
+  --space-section: 7rem;
+  --space-section-sm: 4.5rem;
+
+  /* Decorative accents that need different intensity per theme */
+  --grid-line: rgba(0, 0, 0, 0.045);
+  --hero-glow-1: rgba(201, 130, 31, 0.08);
+  --hero-glow-2: rgba(44, 135, 145, 0.07);
+  --selection-fg: #ffffff;
+}
+
+.dark {
+  /* Surfaces — dark theme */
   --background: #0a0c0f;
   --surface: #0f1216;
   --surface-2: #14181d;
@@ -43,14 +94,10 @@
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 0 1px var(--accent-soft), 0 8px 30px -8px rgba(231, 166, 60, 0.25);
 
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-
-  /* Spacing scale reference (used via tailwind arbitrary + tokens) */
-  --space-section: 7rem;
-  --space-section-sm: 4.5rem;
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --hero-glow-1: rgba(231, 166, 60, 0.07);
+  --hero-glow-2: rgba(79, 180, 191, 0.06);
+  --selection-fg: #14181d;
 }
 
 @theme inline {
@@ -114,14 +161,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   background-image:
-    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(231, 166, 60, 0.07), transparent 60%),
-    radial-gradient(ellipse 700px 480px at 100% 10%, rgba(79, 180, 191, 0.06), transparent 60%);
+    radial-gradient(ellipse 900px 500px at 15% -10%, var(--hero-glow-1), transparent 60%),
+    radial-gradient(ellipse 700px 480px at 100% 10%, var(--hero-glow-2), transparent 60%);
   background-attachment: fixed;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
   background: var(--accent);
-  color: #14181d;
+  color: var(--selection-fg);
 }
 
 :focus-visible {
@@ -152,8 +200,8 @@ body {
 
 .grid-veil {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 100%);
 }

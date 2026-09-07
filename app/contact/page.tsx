@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 };
 
 const channels = [
-  { label: "Email", value: "hello@naedsoftwares.online", href: siteConfig.links.email, icon: Mail },
-  { label: "GitHub", value: "@naedsoftwares", href: siteConfig.links.github, icon: GithubIcon },
+  { label: "Email", value: "naedsoftwares@gmail.com", href: siteConfig.links.email, icon: Mail },
+  { label: "GitHub", value: "eddy-hash", href: siteConfig.links.github, icon: GithubIcon },
   { label: "LinkedIn", value: "NAED SOFTWARES", href: siteConfig.links.linkedin, icon: LinkedinIcon },
   { label: "Facebook", value: "NAED SOFTWARES", href: siteConfig.links.facebook, icon: FacebookIcon },
 ];

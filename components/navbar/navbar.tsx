@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -9,6 +10,7 @@ import { LogoMark } from "./logo-mark";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "/projects", label: "Projects" },
@@ -71,20 +73,24 @@ export function Navbar() {
             <GithubIcon className="h-4 w-4" />
             GitHub
           </Button>
+          <ThemeToggle />
           <Button href="/contact" variant="primary" size="sm">
             Let&apos;s Talk
           </Button>
         </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] text-foreground"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] text-foreground"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -107,7 +113,7 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="flex gap-3 mt-5">
+              <div className="flex items-center gap-3 mt-5">
                 <Button href={siteConfig.links.github} variant="secondary" className="flex-1">
                   <GithubIcon className="h-4 w-4" />
                   GitHub

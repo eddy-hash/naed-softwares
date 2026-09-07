@@ -1,6 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { Mail, Github, Linkedin, Facebook } from "lucide-react";
 
 export default function ContactSection() {
   const emails = Array.isArray(siteConfig.links.email)
@@ -33,7 +32,7 @@ export default function ContactSection() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition"
             >
-              <FaGithub size={20} /> GitHub
+              <Github size={20} /> GitHub
             </a>
             <a
               href={siteConfig.links.linkedin}
@@ -41,7 +40,7 @@ export default function ContactSection() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition"
             >
-              <FaLinkedin size={20} /> LinkedIn
+              <Linkedin size={20} /> LinkedIn
             </a>
             <a
               href={siteConfig.links.facebook}
@@ -49,7 +48,7 @@ export default function ContactSection() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition"
             >
-              <FaFacebook size={20} /> Facebook
+              <Facebook size={20} /> Facebook
             </a>
           </div>
           <a
