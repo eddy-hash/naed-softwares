@@ -39,7 +39,7 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <StatusPill status={project.status} label={project.statusLabel ?? project.status} />
+        <StatusPill status={project.status} label={project.statusLabel} />
       </div>
     </Link>
   );

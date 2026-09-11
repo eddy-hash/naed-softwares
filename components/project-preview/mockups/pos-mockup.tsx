@@ -1,8 +1,9 @@
 import { DeviceFrame, StatCard, Bars, Row } from "../device-frame";
-
+import Image from "next/image";
 export function PosMockup() {
   return (
     <DeviceFrame>
+      
       <div className="grid grid-cols-3 gap-3 mb-4">
         <StatCard label="Revenue today" value="TZS 4.2M" accent="text-accent" />
         <StatCard label="Transactions" value="184" />
@@ -12,7 +13,7 @@ export function PosMockup() {
       <div className="grid md:grid-cols-[1.3fr_1fr] gap-3">
         <div className="rounded-[var(--radius-md)] border border-border bg-surface-2 p-3.5">
           <p className="text-[11px] font-mono text-muted-2 mb-3">Top products</p>
-          <Row cells={["Product", "Qty", "Total"]} muted />
+          <Row cells={["Product", "Quantity", "Total Revenue"]} muted />
           <Row cells={["Rice 5kg", "42", "168,000"]} />
           <Row cells={["Cooking oil 2L", "31", "124,000"]} />
           <Row cells={["Sugar 2kg", "27", "81,000"]} />
@@ -27,6 +28,13 @@ export function PosMockup() {
           </p>
         </div>
       </div>
+      
+     
+       
     </DeviceFrame>
+
+
+ 
+    
   );
 }

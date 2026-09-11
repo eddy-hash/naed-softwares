@@ -13,13 +13,19 @@ const statusDot: Record<ProjectStatus, string> = {
   concept: "bg-muted-2",
 };
 
+const DEFAULT_LABELS: Record<ProjectStatus, string> = {
+  live: "Live",
+  development: "In development",
+  concept: "Concept",
+};
+
 export function StatusPill({
   status,
   label,
   className,
 }: {
   status: ProjectStatus;
-  label: string;
+  label?: string;
   className?: string;
 }) {
   return (
@@ -31,7 +37,7 @@ export function StatusPill({
       )}
     >
       <span className={cn("h-1.5 w-1.5 rounded-full", statusDot[status])} />
-      {label}
+      {label ?? DEFAULT_LABELS[status]}
     </span>
   );
 }

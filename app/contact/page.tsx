@@ -38,7 +38,7 @@ const channels = [
   },
   {
     label: "Facebook",
-    value: "NAED SOFTWARES",
+    value: "Naed Technologies", 
     href: siteConfig.links.facebook,
     icon: FaFacebook,
     iconColor: "text-[#1877F2] hover:text-[#1877F2]/80",

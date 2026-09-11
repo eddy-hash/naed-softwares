@@ -14,17 +14,17 @@ import {
 } from "react-icons/si";
 import { technologies } from "@/lib/config";
 
-// Map technology names to icon components
-const techIconMap: Record<string, any> = {
-  "Next.js": SiNextdotjs,
-  React: SiReact,
-  TypeScript: SiTypescript,
-  NestJS: SiNestjs,
-  "Node.js": SiNodedotjs,
-  PostgreSQL: SiPostgresql,
-  Docker: SiDocker,
-  Git: SiGit,
-  Linux: SiLinux,
+// Map each technology to its icon and its official brand colour
+const techMap: Record<string, { icon: any; color: string }> = {
+  "Next.js": { icon: SiNextdotjs, color: "#ffffff" },       // white
+  React: { icon: SiReact, color: "#61DAFB" },                // React blue
+  TypeScript: { icon: SiTypescript, color: "#3178C6" },      // TS blue
+  NestJS: { icon: SiNestjs, color: "#E0234E" },              // Nest red
+  "Node.js": { icon: SiNodedotjs, color: "#5FA04E" },        // Node green
+  PostgreSQL: { icon: SiPostgresql, color: "#4169E1" },      // Postgres blue
+  Docker: { icon: SiDocker, color: "#2496ED" },              // Docker blue
+  Git: { icon: SiGit, color: "#F05032" },                    // Git orange
+  Linux: { icon: SiLinux, color: "#FCC624" },                // Linux yellow
 };
 
 const container = {
@@ -43,7 +43,7 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-export function TechStrip() {
+export default function TechStrip() {
   return (
     <section id="tech-strip" className="py-8 border-y border-border bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,14 +55,16 @@ export function TechStrip() {
           className="flex flex-wrap items-center justify-center gap-6 md:gap-10"
         >
           {technologies.map((tech) => {
-            const Icon = techIconMap[tech];
+            const entry = techMap[tech];
+            const Icon = entry?.icon;
+            const color = entry?.color ?? "currentColor";
             return (
               <motion.div
                 key={tech}
                 variants={item}
                 className="flex items-center gap-2 text-muted-foreground text-sm font-medium"
               >
-                {Icon && <Icon className="w-5 h-5" />}
+                {Icon && <Icon className="w-5 h-5" style={{ color }} />}
                 <span>{tech}</span>
               </motion.div>
             );

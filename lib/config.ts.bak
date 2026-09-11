@@ -8,10 +8,12 @@ export const siteConfig = {
   tagline: "Building practical, modern and scalable software solutions.",
 
   links: {
-    email: ["edgaedson59@gmail.com", "naedsoftwares@gmail.com"],
-    github: "https://github.com/naedsoftwares",
-    linkedin: "https://www.linkedin.com/company/naedsoftwares",
-    facebook: "https://www.facebook.com/naedsoftwares",
+    email: ["naedsoftwares@gmail.com"],
+    github: "https://github.com/eddy-hash",
+    linkedin: "https://www.linkedin.com/in/mr-edgar",
+    facebook: "https://www.facebook.com/profile.php?id=61591112714429",
+    instagram: "https://www.instagram.com/naedsoftwares",
+    whatsapp: "https://wa.me/255710209220",
   },
 
   formspreeEndpoint: "https://formspree.io/f/mbgjaqvj",

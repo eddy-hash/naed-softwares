@@ -1,17 +1,16 @@
+// data/projects.ts
+
 export type ProjectStatus = "live" | "development" | "concept";
 
 export type Project = {
   slug: string;
   title: string;
   description: string;
-  longDescription?: string;
-  statusLabel?: string;
   category: string;
   status: ProjectStatus;
   technologies: string[];
   image: string;
   features: string[];
-  engineering?: string[];
   liveUrl?: string;
 };
 
@@ -21,9 +20,6 @@ export const projects: Project[] = [
     title: "POS & Inventory Management",
     description:
       "A modern point-of-sale and inventory platform for managing products, sales, customers, stock levels and business operations.",
-    longDescription:
-      "Built for retail and wholesale businesses, this POS handles daily sales, stock movement, multi-warehouse inventory and real-time reporting — all in one system.",
-    statusLabel: "In development",
     category: "Business",
     status: "development",
     technologies: ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL"],
@@ -37,21 +33,12 @@ export const projects: Project[] = [
       "Alerts",
       "Reports",
     ],
-    engineering: [
-      "REST API with NestJS",
-      "PostgreSQL with Prisma",
-      "Role-based access control",
-      "Offline-first sync",
-    ],
   },
   {
     slug: "expense",
     title: "Expense Tracker",
     description:
       "A clean financial management application for monitoring income, expenses and spending patterns.",
-    longDescription:
-      "Track income and expenses, categorize transactions, and visualize spending patterns over time with clean charts and budget alerts.",
-    statusLabel: "In development",
     category: "Finance",
     status: "development",
     technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
@@ -63,20 +50,12 @@ export const projects: Project[] = [
       "Budgets",
       "Transactions",
     ],
-    engineering: [
-      "Node.js REST API",
-      "PostgreSQL aggregation queries",
-      "Chart rendering with Recharts",
-    ],
   },
   {
     slug: "school",
     title: "School Management System",
     description:
       "A centralized platform for managing students, academic records, attendance and school operations.",
-    longDescription:
-      "Manage students, teachers, classes, attendance, exam results and fee payments from a single dashboard — designed for schools that need reliable record-keeping.",
-    statusLabel: "In development",
     category: "Education",
     status: "development",
     technologies: ["Next.js", "React", "NestJS", "PostgreSQL"],
@@ -89,29 +68,17 @@ export const projects: Project[] = [
       "Results",
       "Fees",
     ],
-    engineering: [
-      "Multi-tenant architecture",
-      "Report generation",
-      "Role-based permissions",
-    ],
   },
   {
     slug: "ecommerce",
     title: "E-commerce Platform",
     description:
       "A modern commerce platform for product discovery, shopping and order management.",
-    longDescription:
-      "A full-featured storefront concept: product catalog, cart, checkout, order management and admin analytics.",
-    statusLabel: "Concept",
     category: "E-commerce",
     status: "concept",
     technologies: ["Next.js", "React", "Node.js", "PostgreSQL"],
     image: "/projects/ecommerce/cover.jpg",
     features: ["Products", "Shopping cart", "Orders", "Customers", "Analytics"],
-    engineering: [
-      "Server Components for product pages",
-      "Stripe integration planned",
-    ],
   },
 ];
 
